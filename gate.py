@@ -1,5 +1,7 @@
 # Gate
+print("---------Программа управления воротами--------------")
 print("Input command gate")
+is_open = True
 while True:
     Command1 = input("Command: ").lower()
     if Command1 == "exit":
@@ -10,9 +12,18 @@ while True:
         print("Invalid command")
         continue
     if Command1 == "open":
-        print("Opening gate")
+        if is_open:
+            print("It`s already open.")
+        else:
+            print("Opening gate.")
+            is_open = True
     if Command1 == "close":
-        print("Closing gate")
+        if is_open:
+            print("Closing gate")
+            is_open = False
+        else:
+            print("It`s already closed.")
+
     if Command1 == "help":
         print("open - Открытие ворот")
         print("close - закрыть ворота")
