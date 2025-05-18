@@ -1,19 +1,19 @@
 # Gate
 print("Input command gate")
 while True:
-    Command1 = input("Command: ")
-    if Command1.lower() == "exit":
+    Command1 = input("Command: ").lower()
+    if Command1 == "exit":
         break
-    if Command1.lower() != "exit" and Command1.lower() != "open" \
-        and Command1.lower() != "close" \
-        and Command1.lower() != "help":
+    if Command1 != "exit" and Command1 != "open" \
+        and Command1!= "close" \
+        and Command1 != "help":
         print("Invalid command")
         continue
-    if Command1.lower() == "open":
+    if Command1 == "open":
         print("Opening gate")
-    if Command1.lower() == "close":
+    if Command1 == "close":
         print("Closing gate")
-    if Command1.lower() == "help":
+    if Command1 == "help":
         print("open - Открытие ворот")
         print("close - закрыть ворота")
         print("help - команды")
