@@ -1,3 +1,7 @@
-n = int(input())
-for i in range(1, n + 1):
-    print(i ** 2)
+numbers = int(input())
+result = 0
+for i in range(numbers):
+    n = int(input())
+    if n % 2 == 1:
+        result += n
+print(result)
