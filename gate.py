@@ -20,20 +20,28 @@ print("-" * 30)
 # for x in range(30):
 #     print("-", end ="")
 # print("\n")
+is_open = True
 while True:
-    Command1 = input("Command: ")
-    if Command1.lower() == "exit":
+    Command1 = input("Command: ").lower()
+    if Command1 == "exit":
         break
-    if Command1.lower() != "exit" and Command1.lower() != "open" \
-        and Command1.lower() != "close" \
-        and Command1.lower() != "help":
+    if Command1 != "exit" and Command1 != "open" \
+        and Command1 != "close" \
+        and Command1 != "help":
         print("Invalid command")
         continue
-    if Command1.lower() == "open":
-        print("Opening gate")
-    if Command1.lower() == "close":
-        print("Closing gate")
-    if Command1.lower() == "help":
+    if Command1 == "open":
+        if is_open:
+            print("The gates are already open ")
+        else:    
+            print("Opening gate")
+    if Command1 == "close":
+        if is_open:
+            is_open = False
+            print("Closing gate")
+        else:
+            print("The gates are already closed")
+    if Command1 == "help":
         print("open - Открытие ворот")
         print("close - закрыть ворота")
         print("help - команды")
