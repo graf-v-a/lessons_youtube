@@ -35,6 +35,7 @@ while True:
             print("The gates are already open ")
         else:    
             print("Opening gate")
+            is_open = True
     if Command1 == "close":
         if is_open:
             is_open = False
