@@ -7,3 +7,10 @@
 
 text = input("Введите строку: ").lower()
 vowels = "аеёиоуыэюя"  # Русские гласные
+count = 0
+for char in text:
+    if char in vowels:
+        count += 1
+if count == 0:
+    print("В строке нет гласных букв.")
+print(f"Количество гласных букв в строке: {count}")
